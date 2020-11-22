@@ -11,7 +11,7 @@ $(document).ready(function() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
 
-        $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&units=metric&appid=75a1c8d3035466f613344e7c13d2d4ad', function(data) {
+        $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&units=metric&appid=putAPIkeyHere', function(data) {
 
           temp = data.main.temp;
           window.setTimeout(function() {
@@ -32,7 +32,7 @@ $(document).ready(function() {
               $(".six").html('<div id="six" class="animated fadeIn text-center">Rain vol. in last 3 hours <h4> No Rain </h4> </div>');
             }
 
-            $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=imperial&appid=75a1c8d3035466f613344e7c13d2d4ad', function(data) {
+            $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=imperial&appid=putAPIkeyHere', function(data) {
 
               fahrenheit = data.main.temp;
             });
@@ -332,7 +332,7 @@ $(document).ready(function() {
       });
       */
 
-      $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=metric&appid=75a1c8d3035466f613344e7c13d2d4ad', function(data) {
+      $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=metric&appid=putAPIkeyHere', function(data) {
 
         temp = data.main.temp;
         window.setTimeout(function() {
@@ -353,7 +353,7 @@ $(document).ready(function() {
             $(".six").html('<div id="six" class="animated fadeIn text-center">Rain vol. in last 3 hours <h4> No Rain </h4> </div>');
           }
 
-          $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=imperial&appid=75a1c8d3035466f613344e7c13d2d4ad', function(data) {
+          $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=imperial&appid=putAPIkeyHere', function(data) {
 
             fahrenheit = data.main.temp;
           });
